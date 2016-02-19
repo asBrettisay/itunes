@@ -17,9 +17,16 @@
             <div class="form-group">
               <input type="text" class="form-control" ng-model="artist" placeholder="Artist Name" >
               <button class="btn btn-primary" ng-click="getSongData()"> Submit </button>
+              <select ng-model="searchPredicate" class="form-control" ng-options="val as prop for (prop, val) in searchOptions"></select>
+
             </div>
           </form>
+          <div class="sort-by">
+          <select ng-model="sortPredicate" class="form-control sortForm" ng-options="val as prop for (prop, val) in sortOptions"></select>
+          <input ng-model="filterOptions.filterText" class="form-control text" type="text" placeholder="Sort by">
         </div>
+        </div>
+
       </div>
     </div>
     <div class="panel panel-default">
